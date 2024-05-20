@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #FFF; 
-	font-family: century gothic, Arial, Helvetica, sans-serif;
+	font-family: century gothic, 'IBM Plex Sans', sans-serif;
 	font-size: 14px;
 	color: #555;
 	
@@ -211,7 +211,7 @@ img.aligncenter {
 /* Page */
 
 #page {
-	width: 900px;
+	width: 890px;
 	margin: 0 auto;
 	padding: 0;
  
