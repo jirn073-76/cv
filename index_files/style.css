@@ -64,6 +64,7 @@ a:hover {
 
 img {
 	float: right;
+	margin: 15px;
 }
 
 img.border {
