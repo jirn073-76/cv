@@ -1,4 +1,3 @@
-/* ---- 1. SETUP & VARIABLES (MATERIAL GREY PALETTE) ---- */
 :root {
     --text-primary: #212121;       /* Near black for high-contrast text */
     --text-secondary: #757575;     /* Medium grey for subtitles and less important text */
@@ -7,7 +6,6 @@
     --divider-color: #e0e0e0;      /* A subtle color for borders and lines */
 }
 
-/* ---- 2. GENERAL BODY & FONT STYLING ---- */
 body {
     font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.7;
@@ -19,7 +17,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---- 3. MAIN LAYOUT CONTAINER (THE "CARD") ---- */
 .resume-container {
     max-width: 1100px;
     margin: 32px auto;
@@ -32,38 +29,35 @@ body {
     display: flex;
 }
 
-/* ---- 4. MAIN CONTENT & SIDEBAR ---- */
 .main-content {
     flex: 2;
-    padding: 26px;
+    padding: 48px;
 }
 
 .sidebar {
-    flex: 1;
+    flex: 0 0 380px;
     padding: 48px;
-    border-left: 1px solid var(--divider-color);
+    border-right: 1px solid var(--divider-color);
 }
 
-/* ---- 5. TYPOGRAPHY & SECTION STYLING ---- */
 section {
-    margin-bottom: 40px;
+    margin-bottom: 48px;
 }
 
 h1 {
-    font-size: 2.5em;
-    font-weight: 600;
+    font-size: 2.2em;
+    font-weight: 700;
     margin-bottom: 4px;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
 }
 
 h3 {
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 600;
-    color: var(--text-secondary);
-    margin-bottom: 24px;
-    /* Material Design pattern for section headers */
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--divider-color);
 }
 
 p {
@@ -74,6 +68,13 @@ p {
     color: var(--text-primary); /* Primary text in the main body */
 }
 
+.tab-pre {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    white-space: pre;
+}
 
 .subheading {
     color: var(--text-secondary);
@@ -82,7 +83,6 @@ p {
     font-size: 1.1em;
 }
 
-/* ---- 6. SIDEBAR ELEMENTS ---- */
 .profile-picture {
     width: 150px;
     height: 150px;
@@ -92,42 +92,44 @@ p {
     margin: 0 auto 24px;
 }
 
-.contact-info {
-    margin-top: 32px;
-    margin-bottom: 32px; /* Added for spacing */
-}
-
-.contact-info p {
-    text-align: left;
+.contact-links {
+    margin-top: 24px;
+    margin-bottom: 24px;
     display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    font-size: 0.95em;
+    justify-content: flex-start;
+    gap: 16px;
+    font-size: 1em;
+}
+
+.contact-links a {
     color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
-.contact-info .icon {
+.contact-links a:hover {
     color: var(--text-secondary);
-    font-size: 1.2em;
-    width: 32px;
-    text-align: center;
-    margin-right: 16px;
 }
 
-/* ---- 7. EDUCATION LIST STYLING ---- */
-.education-list {
+.contact-links span {
+    color: var(--divider-color);
+}
+
+
+.list-container {
   display: flex;
   flex-direction: column;
-  gap: 24px; /* Increased gap for clarity */
+  gap: 24px;
 }
 
-.education-item {
+.list-item {
   padding-left: 24px;
   border-left: 2px solid var(--divider-color);
   position: relative;
 }
 
-.education-item::before {
+.list-item::before {
     content: '';
     position: absolute;
     left: -7px;
@@ -139,18 +141,50 @@ p {
     border: 3px solid var(--surface-color);
 }
 
-.education-date {
+.list-date {
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
-.education-details {
+.list-details {
   color: var(--text-secondary);
   font-size: 0.95em;
 }
 
-/* ---- 8. MOBILE RESPONSIVE STYLES ---- */
+.list-details strong {
+    color: var(--text-primary);
+}
+
+.publication-item {
+    margin-bottom: 24px;
+}
+
+.publication-title {
+    font-weight: 600;
+    font-size: 0.95em;
+    color: var(--text-secondary);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.publication-item p {
+    font-size: 0.95em;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.publication-links {
+    font-size: 0.85em;
+    margin-top: 4px;
+    color: var(--text-secondary);
+}
+
+.publication-links a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+}
+
 @media (max-width: 900px) {
     body { padding: 0; }
     
